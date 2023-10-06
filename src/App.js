@@ -12,18 +12,18 @@ import CartContext from './context/CartContext'
 
 import './App.css'
 
-const getCartItemsListFromLocalStorage = () => {
-  const stringifiedCartList = localStorage.getItem('cartListData')
-  const parsedCartList = JSON.parse(stringifiedCartList)
-  if (parsedCartList === null) {
-    return []
-  }
-  return parsedCartList
-}
+// const getCartItemsListFromLocalStorage = () => {
+//   const stringifiedCartList = localStorage.getItem('cartListData')
+//   const parsedCartList = JSON.parse(stringifiedCartList)
+//   if (parsedCartList === null) {
+//     return []
+//   }
+//   return parsedCartList
+// }
 
 class App extends Component {
   state = {
-    cartList: getCartItemsListFromLocalStorage(),
+    cartList: [],
   }
 
   removeAllCartItems = () => {
